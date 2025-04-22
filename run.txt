@@ -1,0 +1,5 @@
+// compile
+javac -cp ".:../lib/*" bank_management/*.java
+
+//run
+java -cp ".:../lib/*" bank_management.home_page
