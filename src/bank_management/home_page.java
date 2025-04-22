@@ -481,6 +481,7 @@ public class home_page extends javax.swing.JFrame implements Runnable {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         // jLabel9.setText("");
 
+        
         jLabel10.setBackground(new java.awt.Color(255, 255, 255));
         jLabel10.setFont(new java.awt.Font("Andalus", 1, 36)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(204, 204, 255));
@@ -492,7 +493,7 @@ public class home_page extends javax.swing.JFrame implements Runnable {
 
         account.setFont(new java.awt.Font("Andalus", 2, 14)); // NOI18N
         account.setForeground(new java.awt.Color(51, 51, 51));
-        account.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Officer", "Local User" }));
+        account.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Officer", "Local User","ATM" }));
         account.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 accountaccountActionPerformed(evt);
@@ -4722,7 +4723,14 @@ jButton59.setOpaque(false);            // allow transparency
         obj.setVisible(true);
     }// GEN-LAST:event_jButton14ActionPerformed
 
+
     private void accountaccountActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_accountaccountActionPerformed
+        String selected =account.getSelectedItem().toString();
+        if(selected.equals("ATM")){
+            new atm_page();
+        }else{
+            JOptionPane.showMessageDialog(null, "You selected: " + selected);
+        }
 
     }// GEN-LAST:event_accountaccountActionPerformed
 
